@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.QuizDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_texe"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:text="Your Score"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/ic_search_black_24dp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grey_lite"/>
+
+                <LinearLayout
+                    android:layout_marginVertical="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:text="Score"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/score"
+                                android:layout_width="wrap_content"
+                                android:textSize="25sp"
+                                android:text="2"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/totalScore"
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:text="Out of 10"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/grey"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textSize="14sp"
+                                android:text="Rank"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/black"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/rank"
+                                android:layout_width="wrap_content"
+                                android:textSize="25sp"
+                                android:text="12"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/colorPrimary"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/totalRank"
+                                android:layout_width="wrap_content"
+                                android:textSize="12sp"
+                                android:text="Out of 17"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/grey"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/share"
+                    android:layout_width="wrap_content"
+                    android:textSize="12sp"
+                    android:textAllCaps="true"
+                    android:text="Share your Score"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/light_green"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/share_score_bg"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="9dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/grey_lite"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="14sp"
+                    android:text="Question Analysis"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/green"/>
+
+                    <TextView
+                        android:id="@+id/right_ans"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Correct(4)"
+                        android:layout_marginLeft="7dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/red"/>
+
+                    <TextView
+                        android:id="@+id/wrongAns"
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Wrong(6)"
+                        android:layout_marginLeft="7dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/grey"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Unattempted(0)"
+                        android:layout_marginLeft="7dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quizListRecycler" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/grey_lite"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_lite"/>
+                    <TextView
+                        android:id="@+id/reattempt"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:text="Reattempt"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="7dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:layout_height="50dp"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_lite"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:text="View Solution"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/light_green"
+                        android:layout_height="50dp"/>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_lite"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

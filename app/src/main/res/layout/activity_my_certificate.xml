@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:id="@+id/line1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <Button
+        android:id="@+id/back_but"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/key_left"
+        android:backgroundTint="@color/white" />
+
+    <TextView
+        android:id="@+id/toolbar_tex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:fontFamily="@font/amiko"
+        android:text="My Certificates"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/certificateListCourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/line1"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/certificate_progress"
+        android:layout_centerInParent="true"
+        />
+<TextView
+    android:id="@+id/no_certificate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Your have no certificate"
+    android:visibility="gone"
+    android:layout_centerInParent="true"
+    />
+
+</RelativeLayout>

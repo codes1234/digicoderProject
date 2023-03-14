@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="7dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:id="@+id/line"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/quizName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="QUIZ One"
+                android:textSize="17sp"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40 min"
+                android:layout_gravity="center"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/green"
+                android:paddingVertical="1dp"
+                android:paddingHorizontal="10dp"
+                android:backgroundTint="#EAFFEA"
+                android:background="@drawable/button_background"
+                android:layout_marginLeft="15dp"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/quizDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="13sp"
+                    android:maxLines="2"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/blue"/>
+
+                <TextView
+                    android:id="@+id/noOfQues"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Qus | 5 mark pre"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/grey_dark"/>
+
+                <TextView
+                    android:id="@+id/perQuestionMarks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Per Question Marks"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/grey_dark"/>
+
+                <TextView
+                    android:id="@+id/openTiming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Result on: 29 Jun 2021 | 04:30"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/grey_dark"/>
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your score"
+                    android:textSize="14sp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/grey_dark"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="13dp"
+                android:backgroundTint="#f0f5fa"
+                android:background="@drawable/circle"
+                android:src="@drawable/file_course" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rightAnsLayout"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Right Ans: "
+                android:textSize="14sp"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/grey_dark"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/rightAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sdsds"
+                android:textSize="14sp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/green" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/errorAnsLayout"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Error Ans: "
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/grey_dark"
+                android:textSize="14sp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/errorAns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sdsds"
+                android:textSize="14sp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/startQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Quiz"
+            android:padding="7dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/colorAccent"
+            android:background="@drawable/button_background" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

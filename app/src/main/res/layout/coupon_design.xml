@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/offer_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="15dp"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/coupon_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/coupon"
+                android:scaleType="fitXY"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/coupon_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="karmasu22"
+            android:textSize="16sp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="7dp"
+            android:fontFamily="@font/amiko"
+            android:background="@drawable/coupon_bg"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/copy_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copy code"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/green" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/offer_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get 5% discount upto ₹ 100"
+        android:textSize="14sp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/amiko"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:id="@+id/offer_full"
+        android:visibility="visible"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_lite"
+            />
+        <TextView
+            android:id="@+id/coupon_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="An offer is a conditional proposal made by a buyer or seller to buy or sell an asset."
+            android:fontFamily="@font/amiko"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/grey"
+            android:justificationMode="inter_word"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/offer_expiry_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Oct"
+            android:textColor="@color/grey"
+            android:textSize="13sp"
+            android:fontFamily="@font/amiko"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/grey_lite"/>
+
+</LinearLayout>

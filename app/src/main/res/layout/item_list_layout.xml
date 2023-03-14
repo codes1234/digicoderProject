@@ -1,0 +1,132 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<ImageView
+    android:id="@+id/delete"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/delete_icon"
+    android:layout_alignParentRight="true"
+    android:layout_margin="20dp"
+    />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/outline_stroke_bg"
+    android:layout_margin="5dp"
+    android:id="@+id/item"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout_all"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="80dp"
+                app:cardCornerRadius="7dp"
+                android:layout_height="80dp">
+                <ImageView
+                    android:id="@+id/item_flc_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner"/>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/item_flc_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name Of course"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/poppins"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rating="4.7"
+                        android:progressTint="@color/black"
+                        style="@style/Widget.AppCompat.RatingBar.Small"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4.6 (799)"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/price_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/item_flc_show_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 499.00"
+                        android:textStyle="normal"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:id="@+id/item_flc_cut_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs. 400.00"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="normal"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/poppins"/>
+                    <TextView
+                        android:id="@+id/item_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="66.66 %Off"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/poppins"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/free_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Free"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/green"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>

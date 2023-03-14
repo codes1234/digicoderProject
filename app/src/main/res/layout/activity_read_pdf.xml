@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/back_but"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_tex"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <WebView
+        android:id="@+id/pdfWebview"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line1"
+        />
+<ProgressBar
+    android:id="@+id/pdf_progress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    />
+
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<androidx.cardview.widget.CardView
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="15dp"
+    android:id="@+id/card"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_color"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="15dp"
+            app:cardElevation="0dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/black">
+
+            <ImageView
+                android:id="@+id/category_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_layers_black_24dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/category_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:lines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"/>
+
+        <TextView
+            android:id="@+id/courseCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="32 Courses"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="12sp"
+            android:textColor="@color/grey"
+            android:layout_marginHorizontal="5dp"
+            android:fontFamily="@font/poppins"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Activities.CategoryCoursesActivity">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="CategoryName"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/ic_search_black_24dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line1"
+        android:background="@drawable/live_back_design">
+
+
+    <LinearLayout
+
+        android:id="@+id/layout2"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:background="@drawable/ic_layers_black_24dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Course Found !"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Course found ! You have to buy something to show here."
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/colorPrimary"/>
+
+    </LinearLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_containerc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:visibility="visible"
+        app:shimmer_duration="800">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <include layout="@layout/list_of_courses_shimmer_layout" />
+            <include layout="@layout/list_of_courses_shimmer_layout" />
+            <include layout="@layout/list_of_courses_shimmer_layout" />
+            <include layout="@layout/list_of_courses_shimmer_layout" />
+            <include layout="@layout/list_of_courses_shimmer_layout" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/layout13"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="15dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/course"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        android:id="@+id/no_course_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Items Available here.."
+        android:textColor="@color/green"
+        android:fontFamily="@font/poppins"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="gone"
+        />
+    </RelativeLayout>
+</RelativeLayout>

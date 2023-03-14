@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loadProgress"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/close_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Coupon Code Below"
+        android:layout_margin="15dp"
+        android:fontFamily="@font/amiko"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/coup_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_margin="15dp"
+        android:padding="12dp"
+        android:fontFamily="@font/amiko"
+        android:background="@drawable/outline_stroke_bg"
+        android:hint="CODERS10215"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="35dp"
+        android:text="Apply"
+        android:fontFamily="@font/amiko"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/red_btn_bg_pressed_color"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/submit"/>
+
+</LinearLayout>
+
+</RelativeLayout>

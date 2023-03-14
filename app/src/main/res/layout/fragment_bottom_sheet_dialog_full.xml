@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="30dp"
+        android:background="@drawable/cross"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/grey_lite"
+        android:layout_height="30dp"></Button>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/grey_lite"
+                android:src="@drawable/user"></de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="Abhishek Kumar Bharaty"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/poppins"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_dark"
+                    android:text="Software Developer"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/poppins"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_dark"
+                    android:text="Join On : 12/12/2020"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/poppins"/>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabRippleColor="@color/grey_lite"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/tab_text"
+            android:background="@color/transparent"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/grey_lite"
+            app:tabIndicatorHeight="0dp"
+            app:tabIndicatorColor="#0B8DF7">
+
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager">
+
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+
+</RelativeLayout>

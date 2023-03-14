@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="160dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:src="@drawable/orange_bg"/>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical">
+
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                android:id="@+id/user_image"-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="70dp"-->
+<!--                android:visibility="gone"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:src="@drawable/user" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:layout_gravity="center_vertical"
+                        android:text="User ID -"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/user_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/amiko"
+                    android:text="User Name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amiko"
+                    android:text="*****@gmail.com"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Admission Status -"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/admissionStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ACTIVE"
+                        android:visibility="gone"
+                        android:paddingHorizontal="10dp"
+                        android:background="@drawable/active_back"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/admissionStatusInactive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INACTIVE"
+                        android:visibility="gone"
+                        android:paddingHorizontal="10dp"
+                        android:textAllCaps="true"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/paidLayout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Paid :"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/paidAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_account_balance_wallet_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="2dp"
+                        android:fontFamily="@font/amiko"
+                        android:text="Wallet :"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/wallet_Amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_wave"
+
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+           android:paddingBottom="15dp"
+            android:orientation="vertical">
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/lineHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/home"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Home"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/user_icon"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/wishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_round_favorite_border_24"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wishlist"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/myEbook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/book"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Ebook"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:id="@+id/order_history"
+                app:layout_scale="0.93">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_payment_black_24dp"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order History"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/offers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_info_outline_black_24dp"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Offers"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/refer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/referearn"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Refer &amp; Earn"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/donate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_duration="200"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_round_money_24"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Donate Us"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:visibility="gone"
+                android:id="@+id/my_certificate"
+                app:layout_scale="0.93">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#E3E3E3"
+                    app:cardCornerRadius="0dp"
+                    android:layout_margin="5dp"
+                    app:contentPadding="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <Button
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/certificate"
+                            android:backgroundTint="@color/grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="My Certificate"
+                            android:textSize="16dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/roboto"
+                            android:layout_marginLeft="10dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:id="@+id/web_Dashboard"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_baseline_dashboard_24"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Web Dashboard"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:id="@+id/educator_Login"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_baseline_login_24"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Educator Login"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:id="@+id/about"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_baseline_supervised_user_circle_24"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About Us"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:id="@+id/setting"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/ic_baseline_settings_24"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Settings"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+            <com.skydoves.elasticviews.ElasticLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_duration="200"
+                android:id="@+id/logout"
+                app:layout_scale="0.93">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="@color/light_orange"
+                        android:src="@drawable/logout_icon"
+                        app:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

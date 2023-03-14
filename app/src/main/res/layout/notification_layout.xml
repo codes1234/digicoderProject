@@ -1,0 +1,105 @@
+<androidx.cardview.widget.CardView android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    android:elevation="5dp"
+    android:layout_margin="7dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginLeft="7dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/logo"
+            android:id="@+id/icon"/>
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            >
+        <TextView
+            android:id="@+id/show_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="40sp"
+            />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title of the notification "
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                android:lines="1"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title of the notification. Title of  Title of the notification Title of the notification "
+                android:textSize="13dp"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/description"
+                android:textColor="#868181"/>
+            <TextView
+                android:id="@+id/show_more"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Read more"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/green"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Days Ago"
+                    android:id="@+id/date"
+                    android:padding="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="13dp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Days Ago"
+                    android:id="@+id/time"
+                    android:padding="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:visibility="gone"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="13dp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

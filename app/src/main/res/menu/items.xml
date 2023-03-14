@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/courses"
+        android:title="Courses"
+        android:icon="@drawable/file"/>
+
+    <item
+        android:id="@+id/live"
+        android:title=""/>
+
+    <item
+        android:id="@+id/e_book"
+        android:title="E book"
+        android:icon="@drawable/book" />
+    <item
+        android:id="@+id/quiz"
+        android:title="Quiz"
+        android:icon="@drawable/quiz"/>
+</menu>

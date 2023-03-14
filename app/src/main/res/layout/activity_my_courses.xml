@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/image34"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:onClick="close"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_texe"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="My Courses"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/ic_search_black_24dp"/>
+    </LinearLayout>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayoute"
+        android:layout_below="@id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabRippleColor="@color/grey_lite"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextAppearance="@style/tab_text"
+        android:background="@color/transparent"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/grey_dark"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="4dp"
+        app:tabIndicatorColor="#1099EB"
+        >
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpagr"
+        android:layout_below="@id/tablayoute">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+</RelativeLayout>

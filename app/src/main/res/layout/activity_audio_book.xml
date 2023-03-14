@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AudioBookDetailsActivity">
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_texe"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:padding="3dp"
+            android:src="@drawable/share_app"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/line"
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested"
+            android:layout_above="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:scrollbars="none">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="20dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/eb_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="UX Designer for Scratch"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/poppins"/>
+                        <TextView
+                            android:id="@+id/eb_short_desc"
+                            android:layout_width="300dp"
+                            android:layout_height="wrap_content"
+                            android:text="Basic Guidance of the UI and UX design for the the developer and students."
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:maxLines="3"
+                            android:ems="3"
+                            android:ellipsize="end"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/poppins"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            app:cardCornerRadius="15dp"
+                            android:layout_marginTop="20dp"
+                            app:cardBackgroundColor="@color/colorPrimary">
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/pic3"/>
+                        </androidx.cardview.widget.CardView>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical">
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/author_circular_icon"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                app:civ_border_width="1dp"
+                                app:civ_border_color="@color/white"
+                                android:src="@drawable/user"/>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:id="@+id/line_author"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/ebook_author_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="14sp"
+                                    android:text="Abhishek"
+                                    android:fontFamily="@font/poppins"/>
+
+                                <TextView
+                                    android:id="@+id/authorCategory"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Author Category"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins"/>
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/followInLinkedIn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+                                    <Button
+                                        android:layout_width="16dp"
+                                        android:layout_height="16dp"
+                                        android:background="@drawable/linkedin" />
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Follow on Linkedin"
+                                        android:textSize="12sp"
+                                        android:textColor="@color/blue"
+                                        android:fontFamily="@font/poppins"
+                                        android:layout_marginLeft="10dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/rating_average"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:layout_marginLeft="5dp"
+                                android:text="4.5"
+                                android:layout_marginRight="5dp"
+                                android:fontFamily="@font/amiko"/>
+                            <Button
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:background="@drawable/rating_star"/>
+                            <TextView
+                                android:id="@+id/review_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/black"
+                                android:textSize="13dp"
+                                android:layout_marginLeft="5dp"
+                                android:text="(20 Reviews)"
+                                android:fontFamily="@font/amiko"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_marginTop="30dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Playlist"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins"/>
+
+                        <LinearLayout
+                            android:id="@+id/line_playlist"
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginTop="10dp"
+                                        android:visibility="gone"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/recycler_view"/>
+
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/no_playlist_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/poppins"
+                                android:layout_marginTop="30dp"
+                                android:textColor="@color/grey"
+                                android:text="Playlist not found" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardInclude"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="5dp"
+                                app:contentPadding="10dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="@color/white">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Includes"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/amiko"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18dp"/>
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scrollbars="none">
+                                        <WebView
+                                            android:id="@+id/includes"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"/>
+                                    </ScrollView>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardWhatILearn"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="5dp"
+                                app:contentPadding="10dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="@color/white">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="What Will I Learn?"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/amiko"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18dp"/>
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scrollbars="none">
+                                        <WebView
+                                            android:id="@+id/whatilearn"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"/>
+                                    </ScrollView>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardDescription"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="5dp"
+                                app:contentPadding="10dp"
+                                android:layout_margin="10dp"
+                                app:cardBackgroundColor="@color/white">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Description"
+                                        android:textStyle="bold"
+                                        android:fontFamily="@font/amiko"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="18dp"/>
+                                    <ScrollView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scrollbars="none">
+                                        <WebView
+                                            android:id="@+id/description"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"/>
+                                    </ScrollView>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Review"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/poppins"/>
+
+                        <LinearLayout
+                            android:visibility="visible"
+                            android:id="@+id/line_review"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="match_parent">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+                                    <com.facebook.shimmer.ShimmerFrameLayout
+                                        android:id="@+id/shimmerForReview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_below="@id/he"
+                                        android:visibility="gone"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_alignParentTop="true"
+                                        app:shimmer_duration="800"
+                                        >
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            >
+                                            <include layout="@layout/shimmer_for_review" />
+                                            <include layout="@layout/shimmer_for_review" />
+                                            <include layout="@layout/shimmer_for_review" />
+                                            <include layout="@layout/shimmer_for_review" />
+                                        </LinearLayout>
+                                    </com.facebook.shimmer.ShimmerFrameLayout>
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:layout_width="match_parent"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        android:id="@+id/course_review"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <TextView
+                                android:id="@+id/no_review_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/poppins"
+                                android:layout_marginTop="30dp"
+                                android:textColor="@color/grey"
+                                android:text="No Reviews are available"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/line_enroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/netPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:text="₹ 0"
+                    android:fontFamily="@font/amiko"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/grey_lite"
+                    android:textSize="14dp"
+                    android:id="@+id/cut_price"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="₹ 0"
+                    android:fontFamily="@font/amiko"/>
+                <TextView
+                    android:id="@+id/enroll_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/outline_stroke_bg"
+                    android:text=" Purchase Now "
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/amiko"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:padding="10dp"
+                    android:src="@drawable/play_button"
+                    android:backgroundTint="@color/light_orange"
+                    android:background="@drawable/button_background"
+                    app:tint="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <com.skydoves.elasticviews.ElasticButton
+                    android:layout_width="25dp"
+                    app:button_duration="200"
+                    app:button_scale="0.93"
+                    android:id="@+id/addFaveroite"
+                    android:layout_height="25dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@drawable/ic_bookmark_border_black_24dp"
+                    android:layout_alignParentRight="true"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/rupee"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="₹"
+                    android:textSize="22sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/full"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/ebookShimmerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            app:shimmer_duration="800">
+
+            <include layout="@layout/shimmer_course_details" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

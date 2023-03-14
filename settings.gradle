@@ -1,0 +1,2 @@
+rootProject.name='Qaione Education'
+include ':app'

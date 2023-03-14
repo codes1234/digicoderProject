@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context=".Activities.OrderHistoryActivity">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_text"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Order History"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:fontFamily="@font/amiko"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/live_back_design"
+        android:orientation="vertical">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardlay"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/order_history_list"
+                />
+        </LinearLayout>
+    </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_order"
+        android:layout_centerInParent="true"
+        />
+<TextView
+    android:id="@+id/no_order_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:textColor="@color/black"
+    android:textStyle="bold"
+    android:visibility="gone"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+    android:text="No order Found "/>
+</RelativeLayout>

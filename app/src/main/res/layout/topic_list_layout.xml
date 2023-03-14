@@ -1,0 +1,73 @@
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:padding="12dp"
+        android:src="@drawable/play_button"
+        android:backgroundTint="@color/light_orange"
+        android:background="@drawable/button_background"
+        app:tint="@color/colorPrimary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/video_intro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introduction"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 hour 20 mins"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:layout_marginLeft="10dp"
+                android:paddingHorizontal="10dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="@color/light_orange"
+                android:background="@drawable/button_background"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/video_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Course Detail"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:maxLines="2"
+            android:ems="3"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"/>
+
+    </LinearLayout>
+
+</LinearLayout>

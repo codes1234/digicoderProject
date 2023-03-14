@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wishlist not found."
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins"
+        android:layout_centerInParent="true"
+        android:textColor="@color/green"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:id="@+id/ebook_recycler"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/ebook_fragment_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        app:shimmer_duration="800"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/purchase_now_layout"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="30dp"
+            android:layout_centerInParent="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:fontFamily="@font/amiko"
+                android:gravity="center"
+                android:text="You don't have purchase any Ebook" />
+        </LinearLayout>
+        <com.skydoves.elasticviews.ElasticLayout
+            android:id="@+id/purchasenow"
+            app:layout_duration="200"
+            app:layout_scale="0.93"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:text="Purchase Now"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:fontFamily="@font/amiko"/>
+            </LinearLayout>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

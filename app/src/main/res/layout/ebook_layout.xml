@@ -1,0 +1,169 @@
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardElevation="7dp"
+    app:cardCornerRadius="7dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/layout_all"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="90dp"
+            app:cardCornerRadius="7dp"
+            android:layout_height="80dp">
+            <ImageView
+                android:id="@+id/ebook_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner"/>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ebook_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title of the ebook"
+                android:textColor="@color/grey_dark"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description of the ebook"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                android:maxLines="2"
+                android:ems="3"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="5dp">
+
+                <RatingBar
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="4.7"
+                    android:progressTint="@color/black"
+                    style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                <TextView
+                    android:id="@+id/rate_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.6"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/poppins"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/amiko"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user_icon"
+                    />
+                <TextView
+                    android:id="@+id/rating_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="799"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/amiko"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=")"
+                    android:layout_marginLeft="5dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/amiko"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/price_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ebook_show_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 00"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"/>
+                <TextView
+                    android:id="@+id/ebook_cut_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹ 00"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"/>
+                <TextView
+                    android:id="@+id/ebook_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/green"
+                    android:text="0.00%"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/poppins"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/free_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Free"
+                android:textSize="14sp"
+                android:textColor="@color/green"
+                android:visibility="gone"
+                android:fontFamily="@font/poppins" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

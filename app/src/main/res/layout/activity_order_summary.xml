@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.OrderSummaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/top"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/back23"
+            android:background="@drawable/key_back"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/amiko"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            android:text="Pay Now"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/image34"
+        android:layout_above="@+id/checkout"
+        android:layout_below="@+id/top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amiko"
+                    android:text="Fill the following detail to enroll"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/amiko"
+                    android:text="First name"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:fontFamily="@font/amiko"
+                    android:hint="Enter first name"
+                    android:inputType="text"
+                    android:padding="13dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:fontFamily="@font/amiko"
+                    android:text="Last name"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:fontFamily="@font/amiko"
+                    android:hint="Enter last name"
+                    android:inputType="text"
+                    android:padding="13dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:text="Email"
+                    android:textSize="11sp" />
+
+                <EditText
+                    android:id="@+id/email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:fontFamily="@font/amiko"
+                    android:hint="Enter email"
+                    android:inputType="textEmailAddress"
+                    android:padding="13dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:visibility="gone"
+                    android:fontFamily="@font/amiko"
+                    android:text="Highest qualification"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:orientation="vertical">
+
+                    <Spinner
+                        android:id="@+id/state"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.502"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="10" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/amiko"
+                android:text="Order Details"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="7dp"
+                app:cardElevation="7dp">
+
+                <LinearLayout
+                    android:id="@+id/size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="90dp"
+                        android:layout_height="80dp"
+                        app:cardCornerRadius="7dp">
+
+                        <ImageView
+                            android:id="@+id/order_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bannar2" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/order_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Title of the courses"
+                            android:textColor="@color/grey_dark"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:ems="3"
+                            android:fontFamily="@font/poppins"
+                            android:maxLines="2"
+                            android:text="Description of the courses"
+                            android:textColor="@color/grey"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <RatingBar
+                                android:id="@+id/rating"
+                                style="@style/Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:progressTint="@color/black"
+                                android:rating="4.7" />
+
+                            <TextView
+                                android:id="@+id/rate_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="4.6"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="13dp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/amiko"
+                                android:text="("
+                                android:textColor="@color/grey_dark"
+                                android:textSize="13dp"
+                                android:textStyle="normal" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/user_icon" />
+
+                            <TextView
+                                android:id="@+id/rating_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/amiko"
+                                android:text="799"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="13dp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="@font/amiko"
+                                android:text=")"
+                                android:textColor="@color/grey_dark"
+                                android:textSize="13dp"
+                                android:textStyle="normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/price_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/show_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:text="₹ 00"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/cut_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="₹ 00"
+                                android:textColor="@color/grey"
+                                android:textSize="13sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/course_discount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="0.00%"
+                                android:textColor="@color/green"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/free_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Free"
+                            android:textColor="@color/green"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/price_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amiko"
+                    android:text="Price Details"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/amiko"
+                        android:text="MRP"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/order_mrp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Rs 100"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/light_orange" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/amiko"
+                        android:text="Offer Price"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/order_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Rs 100"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/light_orange" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/amiko"
+                        android:text="Discount"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/order_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="-Rs 50"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/amiko"
+                        android:text="GST"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/order_gst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Rs 50"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/coupon_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/amiko"
+                        android:text="Coupon Discount"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/couponDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/light_orange" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/amiko"
+                        android:text="Total Price"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/order_totalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/amiko"
+                        android:text="Rs 70"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+               >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wallet Money :"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+               />
+                <TextView
+                    android:id="@+id/enrollWalletAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="Pay by :"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/amiko"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radio_Group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/byOnline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="  Pay By Online"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/byWallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:text="  Pay from Wallet"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/coupon_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@drawable/ic_local_offer_black_24dp"
+                android:fontFamily="@font/amiko"
+                android:padding="10dp"
+                android:text="  Have a coupon code ? Click Here"
+                android:textColor="#075192"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/remove_copon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:drawableStart="@drawable/ic_local_offer_black_24dp"
+                android:fontFamily="@font/amiko"
+                android:padding="8dp"
+                android:text="  Remove coupon ? Click Here"
+                android:textColor="#075192"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/checkout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black"
+        android:fontFamily="@font/amiko"
+        android:text="Checkout"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>

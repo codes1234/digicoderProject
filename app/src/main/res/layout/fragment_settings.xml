@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.AboutMeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="16dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/grey_dark"
+            android:fontFamily="@font/amiko"/>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/share"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#DFE4FF"
+                        android:src="@drawable/ic_share_black_24dp"
+                        app:tint="#3F51B5" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Share App"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/rateus"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#E5F3FF"
+                        android:src="@drawable/rating_star"
+                        app:tint="#2196F3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rate Us"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/blog"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#FFEEE8"
+                        android:src="@drawable/ic_round_mark_chat_blog"
+                        app:tint="#FF5722" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Blog"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/faq"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#E2FFFD"
+                        android:src="@drawable/ic_question_answer_black_24dp"
+                        app:tint="#009688" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FAQs"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/terms"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#D9FFDA"
+                        android:src="@drawable/ic_assignment_black_24dp"
+                        app:tint="#4CAF50" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terms &amp; Conditions"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/privacy"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#FFF7DE"
+                        android:src="@drawable/ic_lock_black_24dp"
+                        app:tint="#FFC107" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Privacy Policy"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/help"
+            app:layout_duration="200"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="6dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#FFE3DA"
+                        android:src="@drawable/ic_help_outline_black_24dp"
+                        app:tint="#FF5722" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Help &amp; Support"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/twiter"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="7dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#E5F3FF"
+                        android:src="@drawable/twitter"
+                        app:tint="#2196F3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Follow On Twitter"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/facebook"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="7dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#DAE0FF"
+                        android:src="@drawable/facebook" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Follow on Facebook"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/insta"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="7dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#FFF2E5"
+                        android:src="@drawable/insta" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Follow on Instagram"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_duration="200"
+            android:id="@+id/youtube"
+            app:layout_scale="0.93">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                android:layout_margin="5dp"
+                app:contentPadding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:padding="7dp"
+                        android:background="@drawable/circle"
+                        android:backgroundTint="#FFE1E5"
+                        android:src="@drawable/youtube" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Follow on Youtube"
+                        android:textSize="16dp"
+                        android:textColor="@color/grey_dark"
+                        android:fontFamily="@font/amiko"
+                        android:layout_marginLeft="10dp"
+                        android:drawableTint="@color/grey"
+                        android:drawableEnd="@drawable/forward_arrow"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/line1"
+        android:background="#F4F4F4"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <com.skydoves.elasticviews.ElasticButton
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_duration="200"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/cross"
+            app:layout_scale="0.93"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Profile"
+            android:textSize="17dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"/>
+        <com.skydoves.elasticviews.ElasticButton
+            android:onClick="updateProfile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_duration="200"
+            android:backgroundTint="#75D605"
+            android:background="@drawable/ic_check_black_24dp"
+            app:layout_scale="0.93"/>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line1"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/uimage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/user"
+                    app:civ_border_color="@color/grey_lite"
+                    app:civ_border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/chooseImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/red_dot"
+                    android:backgroundTint="#4AAE04"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_camera_alt_black_24dp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="11sp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/user"/>
+
+                <EditText
+                    android:id="@+id/uname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:hint="Enter Name"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email Id"
+                android:textSize="11sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/mail"/>
+
+                <EditText
+                    android:id="@+id/uemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:textSize="16sp"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:hint="Enter email Id"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Education"
+                android:textSize="11sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/certificate"/>
+
+                <EditText
+                    android:id="@+id/ueducation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:hint="Enter education"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="11sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/location"/>
+
+                <EditText
+                    android:id="@+id/uaddres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:hint="Enter address"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Branch"
+                android:textSize="11sp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"
+                android:layout_marginLeft="52dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="@drawable/file_course"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="13dp"
+                    android:textSize="16sp"
+                    android:inputType="text"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_background"
+                    android:backgroundTint="@color/light_orange"
+                    android:hint="Enter branch"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.CourseWishlistFragment">
+
+    <TextView
+        android:id="@+id/no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wishlist not found"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/green"
+        />
+
+    <RelativeLayout
+        android:id="@+id/purchase_now_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:fontFamily="@font/amiko"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="You don't have purchase\n any Course" />
+
+        </LinearLayout>
+        <com.skydoves.elasticviews.ElasticLayout
+            android:id="@+id/purchasenow"
+            app:layout_duration="200"
+            app:layout_scale="0.93"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:padding="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/outline_stroke_bg"
+                    android:text="Purchase Now"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/amiko"/>
+            </LinearLayout>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:visibility="visible"
+        android:id="@+id/courses_fragment_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        app:shimmer_duration="800">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+        </LinearLayout>
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/courses_recycler"/>
+
+</RelativeLayout>

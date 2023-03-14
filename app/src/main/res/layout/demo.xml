@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/ebook_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nested"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom"
+            android:layout_marginBottom="3dp"
+            android:background="#E8E8E8"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/t"
+                    android:layout_height="match_parent">
+
+                    <com.skydoves.elasticviews.ElasticButton
+                        android:id="@+id/addReview"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/edit"
+                        app:button_duration="200"
+                        app:button_scale="0.93" />
+
+                    <com.skydoves.elasticviews.ElasticFloatingActionButton
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@color/black"
+                        android:src="@drawable/key_left"
+                        app:fabutton_duration="200"
+                        app:fabutton_scale="0.93" />
+
+                    <RelativeLayout
+                        android:id="@+id/line_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:background="@drawable/orange_bg">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/colored_gredient" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="30dp"
+                            android:layout_marginHorizontal="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/purchase_ebook_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="UX Designer for \nScratch"
+                                android:textColor="@color/white"
+                                android:textSize="30dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/purchase_ebook_shordesc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="Basic Guidance of the UI and UX design for the the developer and students."
+                                android:textColor="@color/grey_lite"
+                                android:textSize="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/purchase_eauthor_pic_round"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:src="@drawable/user"
+                                    app:civ_border_color="@color/white"
+                                    app:civ_border_width="1dp" />
+
+                                <TextView
+                                    android:id="@+id/purchae_ebook_author_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/amiko"
+                                    android:text="Abhishek"
+                                    android:textColor="@color/white"
+                                    android:textSize="14dp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginRight="5dp"
+                                            android:fontFamily="@font/amiko"
+                                            android:text="4.5"
+                                            android:textColor="@color/white"
+                                            android:textSize="14dp" />
+
+                                        <Button
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:background="@drawable/rating_star"
+                                            android:backgroundTint="#FBF91C" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:fontFamily="@font/amiko"
+                                            android:text="(20 Reviews)"
+                                            android:textColor="@color/grey_lite"
+                                            android:textSize="13dp" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/write_review"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="5dp"
+                                        android:fontFamily="@font/amiko"
+                                        android:text="Write Review"
+                                        android:textAlignment="center"
+                                        android:textColor="#039BE5"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/play_demo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:drawableLeft="@drawable/ic_round_play_circle_outline_24"
+                                android:drawableTint="@color/white"
+                                android:fontFamily="@font/amiko"
+                                android:gravity="center_vertical"
+                                android:text="  Play Demo Video"
+                                android:textColor="@color/white"
+                                android:textSize="13dp"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="285dp"
+            android:layout_height="wrap_content">
+            <include layout="@layout/ebook_pdf_layout"/>
+
+        </FrameLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:id="@+id/bottom"
+            app:layout_duration="200"
+            android:visibility="gone"
+            app:layout_scale="0.93"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="55dp">
+            <LinearLayout
+                android:id="@+id/download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/outline_stroke_bg"
+                    android:text="Download ebook"
+                    android:drawableRight="@drawable/download_icon"
+                    android:drawablePadding="10dp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/amiko"/>
+            </LinearLayout>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+        <com.skydoves.elasticviews.ElasticLayout
+            android:id="@+id/getcert"
+            app:layout_duration="200"
+            android:visibility="gone"
+            app:layout_scale="0.93"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:paddingVertical="7dp"
+                android:paddingHorizontal="15dp"
+                android:layout_marginLeft="15dp"
+                android:drawableRight="@drawable/download_icon"
+                android:drawablePadding="10dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="Download Ebook"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:fontFamily="@font/amiko"/>
+        </com.skydoves.elasticviews.ElasticLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

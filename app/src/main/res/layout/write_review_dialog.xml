@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/review_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close_button"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            />
+        <ProgressBar
+            android:id="@+id/progress_for_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Write Your Review"
+        android:layout_margin="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins"/>
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:numStars="5"
+        android:layout_gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/user_review"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:gravity="start"
+        android:layout_margin="14sp"
+        android:padding="10dp"
+        android:fontFamily="@font/poppins"
+        android:background="@drawable/outline_stroke_bg"
+        android:hint="Write Something..."/>
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="40dp"
+        android:text="submit"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/submit"
+        android:fontFamily="@font/poppins"
+        android:backgroundTint="@color/colorPrimary"
+        android:background="@drawable/button_background"/>
+    </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

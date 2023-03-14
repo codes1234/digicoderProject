@@ -1,0 +1,76 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="BottomNavTheme" parent="Theme.MaterialComponents">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+    </style>
+
+    <style name="aftersplash" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="MaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="fontFamily">@font/amiko</item>
+    </style>
+
+    <style name="EditText.Flat.Grey.Small" parent="@style/AppTheme">
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/amiko_semibold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="CustomProgressBarTheme" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="CustomProgressBar" parent="Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+    <style name="progressBarBlue" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="myBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="Animation">
+        <item name="android:windowEnterAnimation">@anim/anim1</item>
+        <item name="android:windowExitAnimation">@anim/anim2</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/inactive_color</item>
+    </style>
+
+
+</resources>

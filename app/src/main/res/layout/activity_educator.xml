@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Activities.EducatorActivity">
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:onClick="close"
+            android:backgroundTint="@color/black"
+            android:background="@drawable/key_left"/>
+
+        <TextView
+            android:id="@+id/toolbar_texe"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="My Courses"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/search"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/white"
+            android:visibility="gone"
+            android:background="@drawable/ic_search_black_24dp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user"/>
+
+            <TextView
+                android:id="@+id/specialist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="25dp"
+                android:fontFamily="@font/amiko"
+                android:backgroundTint="@color/colorAccent"
+                android:background="@drawable/button_bg"
+                android:text="Android Teacher"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:layout_marginTop="-7dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Educator name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/amiko"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/qualification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Educator Qualification."
+                android:textSize="13sp"
+                android:layout_marginVertical="15dp"
+                android:layout_marginHorizontal="35dp"
+                android:fontFamily="@font/amiko"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:backgroundTint="#E8E8E8"
+                android:paddingVertical="10dp"
+                android:layout_marginHorizontal="15dp"
+                android:background="@drawable/border_button">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Courses"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/amiko"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16dp"/>
+                    <View
+                        android:id="@+id/view_course"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:background="@color/colorPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/amiko"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="16dp"/>
+                    <View
+                        android:id="@+id/view_about"
+                        android:layout_width="50dp"
+                        android:visibility="gone"
+                        android:layout_height="2dp"
+                        android:background="@color/colorPrimary"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/line_courses"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Courses"
+                    android:textStyle="normal"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/courses_recycler"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Live Classes"
+                    android:textStyle="normal"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/live_recycler"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ebook"
+                    android:textStyle="normal"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ebook_recycler"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Audio Book"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/abook_recycler"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quiz"
+                    android:textStyle="normal"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/amiko"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quiz_recycler"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/line_about"
+                android:orientation="vertical"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/graduation_hat"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Studied at"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/university"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Banaras Hindu University"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/plus"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/award"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Educator of month july, Top educator of Karmasu"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/current_location"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lives in"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/liveIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Varanasi, Uttar Pradesh"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/birthday_cake"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Qaione Education educator since"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/cod"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6 October"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/home"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Language known"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/language"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hindi, English"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/list"
+                        app:tint="@color/grey" />
+
+                    <TextView
+                        android:id="@+id/teaches"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Teaches General Awareness, Hindi, English,Static, Current affairs etc."
+                        android:textStyle="bold"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:textColor="@color/grey_dark"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

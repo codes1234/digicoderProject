@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/app_nagation"
+    app:startDestination="@id/mycourse_fragment">
+
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:label="Home"
+        android:name="digi.coders.Qaione_Education.Fragments.FragmentHome"
+        />
+    <fragment
+        android:id="@+id/mycourse_fragment"
+        android:label="Course Fragment"
+        android:name="digi.coders.Qaione_Education.Fragments.MyCoursesFragment"
+        >
+        <action
+            android:id="@+id/action_mycourse_fragment_to_home_fragment"
+            app:destination="@id/home_fragment" />
+        <action
+            android:id="@+id/action_mycourse_fragment_to_ebook_fragment"
+            app:destination="@id/ebook_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ebook_fragment"
+        android:label="Ebook"
+        android:name="digi.coders.Qaione_Education.Fragments.EBookFragment"
+        />
+
+
+</navigation>

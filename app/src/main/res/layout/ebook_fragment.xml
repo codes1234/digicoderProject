@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".Fragments.BlankFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E Book"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+<!--
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayoute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabRippleColor="@color/grey_lite"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextAppearance="@style/tab_text"
+        android:background="@color/transparent"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/grey_dark"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorHeight="4dp"
+        app:tabIndicatorColor="@color/colorPrimary"
+        >
+    </com.google.android.material.tabs.TabLayout>
+-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpagr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</RelativeLayout>

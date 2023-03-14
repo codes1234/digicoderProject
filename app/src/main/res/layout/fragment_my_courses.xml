@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/no_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Items in Wishlist"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textColor="@color/green"
+        />
+
+    <RelativeLayout
+        android:id="@+id/purchase_now_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/image34"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:fontFamily="@font/amiko"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="You don't have purchase\n any Course" />
+            <com.skydoves.elasticviews.ElasticLayout
+                android:id="@+id/purchasenow"
+                app:layout_duration="200"
+                app:layout_scale="0.93"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:padding="10dp"
+                    android:text="Purchase Now"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:background="@drawable/answer_background"
+                    android:fontFamily="@font/amiko"/>
+            </com.skydoves.elasticviews.ElasticLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:visibility="visible"
+        android:id="@+id/courses_fragment_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        app:shimmer_duration="800"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+            <include layout="@layout/list_of_courses_shimmer_layout"/>
+        </LinearLayout>
+
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/courses_recycler"/>
+
+</RelativeLayout>

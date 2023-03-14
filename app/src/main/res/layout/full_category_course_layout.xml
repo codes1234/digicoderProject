@@ -1,0 +1,112 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout_all"
+
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/outline_stroke_bg"
+            android:padding="5dp"
+            android:id="@+id/size"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="7dp"
+                android:layout_height="130dp">
+                <ImageView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner"/>
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/hot_offers"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/course_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title of the courses for this app courses for this app"
+                android:textStyle="normal"
+                android:textColor="@color/grey_dark"
+                android:textSize="16dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/amiko"/>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:rating="4.7"
+                    style="@style/Widget.AppCompat.RatingBar.Small"></RatingBar>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4.6 (799)"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/amiko"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/show_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 499.00"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/amiko_semibold"/>
+                <TextView
+                    android:id="@+id/cut_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs. 400.00"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="normal"
+                    android:textColor="@color/grey_dark"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/amiko"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:layout_width="70dp"
+        android:id="@+id/see_all_text"
+        android:layout_marginTop="70dp"
+        android:visibility="gone"
+        android:layout_height="70dp">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/vieww"/>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

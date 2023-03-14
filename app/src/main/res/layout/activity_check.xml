@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_assignment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/back_but"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:onClick="backFrom"
+            android:background="@drawable/key_left"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/toolbar_tex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="Complete your assignment"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="assignment.json"
+        app:lottie_loop="true"
+        android:layout_below="@id/line1"
+        app:lottie_autoPlay="true"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="10dp"
+        android:layout_margin="5dp"
+        android:layout_below="@id/animation_view"
+        app:cardCornerRadius="10dp"
+        >
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        >
+        <TextView
+            android:id="@+id/assignment_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Assignement -A"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:id="@+id/assignment_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This article explains how to set various events on successive clicks on the same button in Android. Procedure. Start Eclipse IDE. Create a new ..."
+                    android:fontFamily="@font/poppins"
+                    android:layout_margin="10dp"
+                    android:justificationMode="inter_word"
+                    />
+            </ScrollView>
+        </LinearLayout>
+        <Button
+            android:id="@+id/download_attchment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/download_icon"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingHorizontal="15dp"
+            android:onClick="downloadAssignet"
+            android:layout_margin="10dp"
+            android:background="@drawable/border_button"
+            android:text="Download Attachment"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/choosePdfLayout"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload assignement"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                />
+            <ImageView
+                android:id="@+id/pdficon"
+                android:visibility="gone"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/pdf_icon"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/choosePdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose pdf"
+                android:gravity="center"
+                android:padding="5dp"
+                android:onClick="choosePdf"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_assignment"
+                android:drawableRight="@drawable/upload_icon"
+                android:fontFamily="@font/poppins"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border_button"
+                android:padding="10dp"
+                android:onClick="uploadAssignme"
+                android:layout_centerHorizontal="true"
+                android:text="Upload"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/downloadAnswerKey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/download_icon"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_button"
+                android:text="Download Answer key"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
